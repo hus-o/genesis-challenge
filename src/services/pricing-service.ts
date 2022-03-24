@@ -130,7 +130,6 @@ export class PricingService {
               if (acc[ccyPair.name]) {
                 return acc;
               }
-              const sub = ccyPair.subscribeToPrices$();
               return {
                 ...acc,
                 [ccyPair.name]: {
