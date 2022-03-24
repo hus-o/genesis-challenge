@@ -35,3 +35,5 @@ Use any libraries or frameworks as you see fit.
 You don't have to use the project provided, it's just to give you a starting point. Feel free to use your preferred project/build tool.
 
 You solution will form the basis of a technical discussion.
+
+**Extra points awarded for using web components** 🙂
