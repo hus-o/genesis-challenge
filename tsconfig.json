@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/types",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "ES2015",
+    "allowJs": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": true,
+    "emitDeclarationOnly": true,
+    "experimentalDecorators": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": [
+      "DOM",
+      "ES2015",
+      "ES2016",
+      "ES2017"
+    ],
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "src/**/tests"
+  ],
+}

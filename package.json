@@ -1,0 +1,82 @@
+{
+  "name": "ui-interview-exercise",
+  "version": "1.0.0",
+  "description": "UI Developer Interview Exercise",
+  "private": true,
+  "main": "build/index.js",
+  "types": "build/types/index.d.ts",
+  "scripts": {
+    "start": "webpack serve --config webpack.config.js",
+    "build": "webpack && tsc",
+    "test": "jest --silent",
+    "coverage": "npm run test -- --coverage",
+    "prepare": "npm run build",
+    "trypublish": "npm publish || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monobyte/ui-interview-exercise.git"
+  },
+  "author": "Dan Carter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monobyte/ui-interview-exercise/issues"
+  },
+  "homepage": "https://github.com/monobyte/ui-interview-exercise#readme",
+  "dependencies": {
+    "rxjs": "^7.5.5",
+    "@babel/runtime": "^7.17.8",
+    "lodash-es": "^4.17.21",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.7",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-decorators": "^7.17.2",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/plugin-transform-typescript": "^7.16.8",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.11",
+    "@types/jest": "^27.4.1",
+    "@types/lodash-es": "^4.17.6",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-minify": "^0.5.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^7.32.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "regenerator-runtime": "^0.13.9",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.1",
+    "typescript": "^4.6.2",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "4.7.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/scripts/testMock.js",
+      "\\.(css|less)$": "<rootDir>/scripts/testMock.js"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "web.ts",
+      "ts",
+      "web.tsx",
+      "tsx",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  }
+}
