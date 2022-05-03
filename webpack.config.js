@@ -1,37 +1,40 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   devtool: 'cheap-module-source-map',
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
   output: {
-    filename: 'index.js'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
   optimization: {
-    minimize: false,
+    minimize: false
   },
   devServer: {
     open: true,
     hot: true,
-    host: "localhost",
+    host: 'localhost',
     port: 9000
   },
   module: {
     rules: [
       {
-        test: /\.(m|j|t)s$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript']
+          }
         }
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          { loader: "css-loader", options: { sourceMap: true } },
-        ],
+        use: [MiniCssExtractPlugin.loader, {loader: 'css-loader', options: {sourceMap: true}}]
       }
     ]
   },
@@ -43,8 +46,9 @@ module.exports = {
       title: 'FX Trading App',
       template: 'src/index.html'
     }),
+    new webpack.HotModuleReplacementPlugin()
   ],
   resolve: {
-    extensions: ['.ts', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.json']
   }
 };

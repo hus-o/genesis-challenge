@@ -2,38 +2,13 @@
 
 To run the app:
 
-1) npm install
-2) npm run start
+1. npm install
+2. npm start
 
-# Exercise Instructions
+# Notes
 
-Create an FX trading app that enables a user to trade from a given list of currency pairs and keeps a record of previous trades.
+- I've kept the UI barebones and not included any account/balance system as the instructions said I could decide how basic/complex I wanted to make it and with the bank holiday time constraints I didn't want to overdo it.
 
-1) The app should allow the selection of two different currencies from the supported list.
+- I chose to to use localStorage for minimal data storage for the orders as I think it's better in case of accidental refresh etc. to keep details
 
-2) When two currencies have been selected the user should be able to open a trading widget.
-The trading widget should allow the user to:
-- Set the order size
-- See the calculated value of the trade based on current price
-- BUY or SELL at the current price
-
-3) When the user clicks a price, they should be shown a confirmation screen.
-The confirmation screen should warn the user if the current price moves above or below the selected trade price by the AcceptablePriceVariance value. *How you choose to present this to the user is up to you.*
-
-4) Once the user accepts the price on the confirmation screen, the trade should be executed and placed in a list of previous trades.
-This should show the price, currency, size, value and time the order was made.
-
-5) If the user closes a trading widget it should unsubscribe from the price stream.
-
-# Requirements
-- Please use Typescript & CSS
-- Use the PricingService provided (feel free to modify)
-
-# Other information
-Use any libraries or frameworks as you see fit.
-
-You don't have to use the project provided, it's just to give you a starting point. Feel free to use your preferred project/build tool.
-
-You solution will form the basis of a technical discussion.
-
-**Extra points awarded for using web components** 🙂
+- I chose to use React as this is something I'm familiar with and could work quickly in a short time, if I had more time I'd explore redoing it with web components. I also used regular css.

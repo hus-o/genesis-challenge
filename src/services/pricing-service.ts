@@ -22,8 +22,8 @@ export enum PriceAction {
 }
 
 export enum Side {
-  BUY,
-  SELL
+  BUY = 'Buy',
+  SELL = 'Sell'
 }
 
 export type Currency = {code: string; name: string; symbol: string};
@@ -100,7 +100,7 @@ export class CCYPair {
   private getPriceTick(): Price {
     const buyPrice = this.seedPrice + getRandomArbitrary(-0.07, 0.07);
     const sellPrice = this.seedPrice + getRandomArbitrary(-0.07, 0.07);
-    
+
     return {
       buy: buyPrice,
       sell: sellPrice

@@ -1,0 +1,75 @@
+.modal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1001;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.background {
+  background: rgba(30, 30, 30, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.content {
+  position: relative;
+  top: 50px;
+  background-color: white;
+  padding: 32px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 500px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+}
+
+input[type='number'] {
+  margin-bottom: 25px;
+  height: 25px;
+  width: 250px;
+  font-size: 24px;
+}
+
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.pairCode {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.confirmMessage,
+.confirmCurrentPrice {
+  margin-bottom: 24px;
+}
+
+.confirmMessage {
+  font-size: 18px;
+}

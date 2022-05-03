@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "outDir": "./build/types",
-    "module": "ESNext",
+    "jsx": "react",
+    "outDir": "./dist/",
+    "module": "es6",
     "moduleResolution": "node",
-    "target": "ES2015",
+    "target": "es5",
     "allowJs": true,
     "sourceMap": true,
     "declaration": true,
@@ -17,17 +18,8 @@
     "emitDeclarationOnly": true,
     "experimentalDecorators": true,
     "suppressImplicitAnyIndexErrors": true,
-    "lib": [
-      "DOM",
-      "ES2015",
-      "ES2016",
-      "ES2017"
-    ],
+    "lib": ["DOM", "ES2015", "ES2016", "ES2017"]
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "src/**/tests"
-  ],
+  "include": ["src", "declaration.d.ts"],
+  "exclude": ["src/**/tests"]
 }

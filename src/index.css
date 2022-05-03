@@ -1,0 +1,68 @@
+body {
+  height: 100vh;
+  margin: 0px;
+  background-color: #e9ecef;
+}
+
+#root {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.header {
+  align-self: center;
+}
+
+.currencyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.currencyList {
+  font-size: 32px;
+  width: fit-content;
+  position: relative;
+  margin: 6px;
+  padding: 6px;
+}
+label {
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  bottom: 25%;
+  left: 25%;
+  visibility: hidden;
+}
+
+.selected {
+  background-color: #6c757d;
+  border-radius: 15px;
+  position: relative;
+  margin: 6px;
+  padding: 6px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.tradeButton {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-around;
+}
