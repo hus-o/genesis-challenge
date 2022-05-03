@@ -1,7 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {XIcon} from '@heroicons/react/solid';
 import './modal.css';
-import {Currency, Price, PricingService, Side} from '../services/pricing-service';
+import {
+  AcceptablePriceVariance,
+  Currency,
+  Price,
+  PricingService,
+  Side
+} from '../services/pricing-service';
 import {Input} from './input';
 import {v4} from 'uuid';
 import {Order} from './orders';
@@ -124,6 +130,9 @@ export const ConfirmCard: React.FC<ConfirmCardProps> = ({
     5
   )} are you sure ?`;
   const percDiff = (((currentPrice - price) / price) * 100).toFixed(2);
+  const warning =
+    price - AcceptablePriceVariance > currentPrice ||
+    price - AcceptablePriceVariance < currentPrice;
 
   const handleConfirm = () => {
     const orders = JSON.parse(localStorage.getItem('orders') || '[]');
@@ -147,6 +156,11 @@ export const ConfirmCard: React.FC<ConfirmCardProps> = ({
       <div className="confirmCurrentPrice">
         Current Price: {currentPrice.toFixed(5)} ({percDiff}%)
       </div>
+      {warning && (
+        <div className="warningMsg">
+          Warning: The price has moved more than the acceptable variance (0.4)
+        </div>
+      )}
       <button className="tradeButton" onClick={handleConfirm}>
         Confirm
       </button>

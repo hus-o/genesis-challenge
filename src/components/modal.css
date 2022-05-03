@@ -73,3 +73,8 @@ input[type='number'] {
 .confirmMessage {
   font-size: 18px;
 }
+
+.warningMsg {
+  color: #e63946;
+  margin-bottom: 24px;
+}
