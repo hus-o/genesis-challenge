@@ -15,4 +15,6 @@ To run the app:
 
 - I've included some simple input validation and kept the visualised values to 5 or 2 decimal places depending on what it is. I didn't reduce the decimal places at point of getting the value because I wanted to keep precision on future calculations.
 
+- Assumed the AcceptableVariance was the value 0.4 rather than a percentage or something else
+
 - I have previously built something similar but more complex (involving auth and db), linked here: https://github.com/hus-o/stock-trading-app
