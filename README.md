@@ -12,3 +12,7 @@ To run the app:
 - I chose to to use localStorage for minimal data storage for the orders as I think it's better in case of accidental refresh etc. to keep details
 
 - I chose to use React as this is something I'm familiar with and could work quickly in a short time, if I had more time I'd explore redoing it with web components. I also used regular css.
+
+- I've included some simple input validation and kept the visualised values to 5 or 2 decimal places depending on what it is. I didn't reduce the decimal places at point of getting the value because I wanted to keep precision on future calculations.
+
+- I have previously built something similar but more complex (involving auth and db), linked here: https://github.com/hus-o/stock-trading-app
